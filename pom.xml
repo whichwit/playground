@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.gatech</groupId>
-    <artifactId>VRDR</artifactId>
+    <artifactId>vrdr</artifactId>
     <version>4.0.3</version>
     <packaging>jar</packaging>
 
