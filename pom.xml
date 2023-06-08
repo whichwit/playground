@@ -4,7 +4,7 @@
 
     <groupId>edu.gatech</groupId>
     <artifactId>VRDR</artifactId>
-    <version>v1.4.0-STU2</version>
+    <version>4.0.3</version>
     <packaging>jar</packaging>
 
     <name>VRDR</name>
@@ -73,14 +73,13 @@
             </plugin>
         </plugins>
     </build>
-
     <distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/whichwit/playground</url>
-    </repository>
-  </distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/whichwit/playground</url>
+        </repository>
+    </distributionManagement>
 
 </project>
 
