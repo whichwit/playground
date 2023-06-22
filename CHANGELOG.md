@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0"></a>
+## [4.1.0](https://www.github.com/whichwit/playground/releases/tag/v4.1.0) (2023-6-22)
+
+### Other
+
+* fix dependency name (#13) ([65d13ee](https://www.github.com/whichwit/playground/commit/65d13ee7a2b206caaf420c2bb38beebb0a06615d))
+* name change (#12) ([bfbdad0](https://www.github.com/whichwit/playground/commit/bfbdad0a101d5f3e49345a1617b26504d14d7fb4))
+* workflow_dispatch ([372fa97](https://www.github.com/whichwit/playground/commit/372fa97c444a3fc8bdb16d7d73865fa0266fe5e9))
+
 <a name="4.1.0-pre.8"></a>
 ## [4.1.0-pre.8](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.8) (2023-6-22)
 
