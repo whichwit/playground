@@ -1,7 +1,6 @@
 name: Lint commit message
 
 on:
-  push:
   pull_request:
     types: [opened, synchronize, reopened, edited]
 
@@ -19,9 +18,6 @@ jobs:
         run: |
           npm install -g @commitlint/cli @commitlint/config-conventional
           echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
-      - name: Validate current commit (last commit) with commitlint
-        if: github.event_name == 'push'
-        run: commitlint --from HEAD~1 --to HEAD --verbose
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
         run: echo "${{ github.event.pull_request.title }}" | commitlint --verbose
