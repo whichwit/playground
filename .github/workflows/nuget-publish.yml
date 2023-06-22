@@ -40,7 +40,7 @@ jobs:
       - name: Get current version
         id: get-current-version
         run: |
-          echo ::set-output name=version::$(dotnet versionize inspect)
+          echo "version=$(versionize inspect)" >> $GITHUB_OUTPUT
       - name: Create release Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
