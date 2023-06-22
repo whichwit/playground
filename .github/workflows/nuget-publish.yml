@@ -17,14 +17,14 @@ jobs:
       - name: Check last commit subject
         id: commit-subject
         run: |
-          git log -n 1 --pretty=%s | grep "chore(release):" && echo 1
-      - name: Early exit
-        if: ${{ steps.commit-subject.outputs.skip }} == 1
-        run: |
-          gh run cancel ${{ github.run_id }}
-          gh run watch ${{ github.run_id }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git log -n 1 --pretty=%s | grep "chore(release):" -v && echo 1
+      # - name: Early exit
+      #   if: ${{ steps.commit-subject.outputs.skip }} == 1
+      #   run: |
+      #     gh run cancel ${{ github.run_id }}
+      #     gh run watch ${{ github.run_id }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Versionize
         run: |
           dotnet tool install --global Versionize
