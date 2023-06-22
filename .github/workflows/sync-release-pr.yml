@@ -10,7 +10,7 @@ permissions:
   pull-requests: 'write'
 
 jobs:
-  verify-commit:
+  parse-commit:
     runs-on: ubuntu-latest
     outputs:
       subject: ${{ steps.commit-subject.outputs.subject }}
@@ -23,14 +23,11 @@ jobs:
   release-pull-request:
     runs-on: ubuntu-latest
     needs: verify-commit
-    if: startsWith(needs.verify-commit.outputs.subject, 'chore(release):') != true
+    if: startsWith(needs.parse-commit.outputs.subject, 'chore(release):') != true
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      # - run: |
-      #     git config --global user.name "GitHub Actions"
-      #     git config --global user.email "noreply@github.com"
       - run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
