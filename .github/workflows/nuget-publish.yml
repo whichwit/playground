@@ -12,6 +12,8 @@ jobs:
       skip: ${{ steps.commit-subject.outputs.skip }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - run: |
           git log -n 1 --pretty=%s 
       - name: Check last commit subject
