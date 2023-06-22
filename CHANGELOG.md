@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0-pre.6"></a>
+## [4.1.0-pre.6](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.6) (2023-6-22)
+
+### Other
+
+* abc:fji ([e38a610](https://www.github.com/whichwit/playground/commit/e38a6104a8f5d6c3f32d50c9f8d5d3c943d2123e))
+* add pull_request.edited event ([081d4e3](https://www.github.com/whichwit/playground/commit/081d4e39ff929fc7ba3ff8294d8b49989b5afbc3))
+* add pull_request.edited event ([d0f4cc4](https://www.github.com/whichwit/playground/commit/d0f4cc4ab33efed08ac1048820009dcf257369e6))
+* add pull_request.edited event ([192218e](https://www.github.com/whichwit/playground/commit/192218ec65e5315646bff2c023a308ccf1677f96))
+* add pull_request.edited event ([96ef589](https://www.github.com/whichwit/playground/commit/96ef5896643643e11667b11097fa0f54af19ebe9))
+* add pull_request.edited event ([9c17161](https://www.github.com/whichwit/playground/commit/9c17161e266ddd89c35e5092ba19bf5c17ceae9c))
+* another branch (#8) ([399dfd8](https://www.github.com/whichwit/playground/commit/399dfd8e77e665944fdf2fddd09320f6c9758089))
+* setup node ([057ccc1](https://www.github.com/whichwit/playground/commit/057ccc13ec41a9d5babc4a1cb42caed4dfec5068))
+* setup node ([ac4c7be](https://www.github.com/whichwit/playground/commit/ac4c7be1c8637bbce3cc79e27798855dcb538ffe))
+
 <a name="4.1.0-pre.5"></a>
 ## [4.1.0-pre.5](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.5) (2023-6-22)
 
