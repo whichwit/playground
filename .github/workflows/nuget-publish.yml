@@ -36,7 +36,7 @@ jobs:
           dotnet tool install --global Versionize
       - name: Bump version
         run: |
-          versionize --pre-release pre --proj-version-bump-logic --skip-commit --aggregate-pre-releases
+          versionize --pre-release pre --proj-version-bump-logic --skip-tag --aggregate-pre-releases
       - name: Get current version
         id: get-current-version
         run: |
