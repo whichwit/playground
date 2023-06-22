@@ -24,4 +24,4 @@ jobs:
         run: commitlint --from HEAD~1 --to HEAD --verbose
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
-        run: echo ${{ github.event.pull_request.title }} | commitlint --verbose
+        run: echo "${{ github.event.pull_request.title }}" | commitlint --verbose
