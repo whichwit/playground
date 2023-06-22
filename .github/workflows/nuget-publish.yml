@@ -17,17 +17,14 @@ jobs:
           fetch-depth: 0
       - run: |
           git log -n 1 --pretty=%s 
-      - name: Check last commit subject
+      - name: Get commit subject
         id: commit-subject
         run: |
-          git log -n 1 --pretty=%s | grep "chore(release):" -v && echo 1
-      # - name: Early exit
-      #   if: ${{ steps.commit-subject.outputs.skip }} == 1
+          echo "subject=$(git log -n 1 --pretty=%s)" >> $GITHUB_OUTPUT  
+      # - name: Check last commit subject
+      #   id: commit-subject
       #   run: |
-      #     gh run cancel ${{ github.run_id }}
-      #     gh run watch ${{ github.run_id }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     git log -n 1 --pretty=%s | grep "chore(release):" -v && echo 1
       - run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "noreply@github.com"
@@ -47,6 +44,7 @@ jobs:
           echo "version=$(versionize inspect)" >> $GITHUB_OUTPUT
       - name: Create release Pull Request
         uses: peter-evans/create-pull-request@v5
+        if: !startsWith(${{ steps.commit-subject.outputs.subject }}, "chore(release):" )
         id: cpr
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
