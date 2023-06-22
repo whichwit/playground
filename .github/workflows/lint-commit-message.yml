@@ -1,6 +1,9 @@
 name: Lint commit message
 
-on: [push, pull_request]
+on:
+  - push:
+  - pull_request:
+      types: [opened, synchronize, reopened, edited]
 
 jobs:
   commitlint:
