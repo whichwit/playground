@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0-pre.3"></a>
+## [4.1.0-pre.3](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.3) (2023-6-22)
+
+### Other
+
+* Merge branch 'main' of github.com:whichwit/playground ([6249292](https://www.github.com/whichwit/playground/commit/6249292019e917f302c7aa29e67dd13930bbfd83))
+* graceful exit ([b5ba4f0](https://www.github.com/whichwit/playground/commit/b5ba4f0737a3a4e437082b4e4b2f7c8081510c8b))
+* graceful exit ([2b00e8c](https://www.github.com/whichwit/playground/commit/2b00e8c85d539048299909409cf1317c5bcddd1b))
+
 <a name="4.1.0-pre.2"></a>
 ## [4.1.0-pre.2](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.2) (2023-6-22)
 
