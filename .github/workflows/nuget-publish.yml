@@ -25,6 +25,8 @@ jobs:
       #     gh run watch ${{ github.run_id }}
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
       - name: Setup Versionize
         run: |
           dotnet tool install --global Versionize
