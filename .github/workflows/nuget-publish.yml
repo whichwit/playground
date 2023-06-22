@@ -4,7 +4,8 @@ on:
   push:
     branches: [ "master", "main" ]
 permissions:
-  actions: 'write'
+  contents: 'write'
+  pull-requests: 'write'
 jobs:
   release-pull-request:
     runs-on: ubuntu-latest
@@ -55,12 +56,8 @@ jobs:
           body: |
             This is an automated pull request to release a new version of the package.
             Please review and merge if everything looks good.
-          branch: release/${{ steps.get-current-version.outputs.version }}
-          branch-suffix: null
-          delete-branch: false
-          labels: null
-          draft: false
-          signoff: false
+          branch: release
+          delete-branch: true
 
       # - name: Setup dotnet
       #   uses: actions/setup-dotnet@v3
