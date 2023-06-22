@@ -25,6 +25,8 @@ jobs:
       #   id: commit-subject
       #   run: |
       #     git log -n 1 --pretty=%s | grep "chore(release):" -v && echo 1
+      - run: echo "${{ steps.commit-subject.outputs.subject }}"
+      - run: echo "${{startsWith(steps.commit-subject.outputs.subject, 'chore(release):')}}"
       - run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "noreply@github.com"
@@ -44,7 +46,7 @@ jobs:
           echo "version=$(versionize inspect)" >> $GITHUB_OUTPUT
       - name: Create release Pull Request
         uses: peter-evans/create-pull-request@v5
-        if: startsWith(${{ steps.commit-subject.outputs.subject }}, "chore(release):" ) != true
+        if: ${{startsWith(steps.commit-subject.outputs.subject, 'chore(release):')}} != true
         id: cpr
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
