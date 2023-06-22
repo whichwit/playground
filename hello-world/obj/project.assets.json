@@ -11,7 +11,7 @@
     "/home/le/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "4.0.4-preview.0",
     "restore": {
       "projectUniqueName": "/home/le/github.com/whichwit/playground/hello-world/hello-world.csproj",
       "projectName": "hello-world",
