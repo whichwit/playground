@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0-pre.5"></a>
+## [4.1.0-pre.5](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.5) (2023-6-22)
+
+### Other
+
+* rename workflow file ([bd99ca6](https://www.github.com/whichwit/playground/commit/bd99ca64448fb90448188f11317c6ae43ddb72ff))
+
 <a name="4.1.0-pre.4"></a>
 ## [4.1.0-pre.4](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.4) (2023-6-22)
 
