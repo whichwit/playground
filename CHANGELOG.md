@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0-pre.8"></a>
+## [4.1.0-pre.8](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.8) (2023-6-22)
+
+### Other
+
+* clean up ([a96ea56](https://www.github.com/whichwit/playground/commit/a96ea56e197cf4035dd7ca21a83c469374306acf))
+* empty body (#11) ([32ef73e](https://www.github.com/whichwit/playground/commit/32ef73ed9f738d0eb609a7f4c07de7df2bbe63cf))
+
 <a name="4.1.0-pre.7"></a>
 ## [4.1.0-pre.7](https://www.github.com/whichwit/playground/releases/tag/v4.1.0-pre.7) (2023-6-22)
 
