@@ -1,4 +1,4 @@
-name: Publish package to GitHub Packages
+name: Sync release pull-request
 on:
   workflow_dispatch:
   push:
