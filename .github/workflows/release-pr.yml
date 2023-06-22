@@ -9,27 +9,17 @@ permissions:
 jobs:
   release-pull-request:
     runs-on: ubuntu-latest
-    outputs:
-      skip: ${{ steps.commit-subject.outputs.skip }}
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - run: |
-          git log -n 1 --pretty=%s 
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "noreply@github.com"
       - name: Get commit subject
         id: commit-subject
         run: |
           echo "subject=$(git log -n 1 --pretty=%s)" >> $GITHUB_OUTPUT  
-      # - name: Check last commit subject
-      #   id: commit-subject
-      #   run: |
-      #     git log -n 1 --pretty=%s | grep "chore(release):" -v && echo 1
-      - run: echo "${{ steps.commit-subject.outputs.subject }}"
-      - run: echo "${{startsWith(steps.commit-subject.outputs.subject, 'chore(release):')}}"
-      - run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "noreply@github.com"
       - name: Setup dotnet
         uses: actions/setup-dotnet@v3
         with:
@@ -37,7 +27,7 @@ jobs:
       - name: Setup Versionize
         run: |
           dotnet tool install --global Versionize
-      - name: Bump version
+      - name: Bump version and create changelog
         run: |
           versionize --pre-release pre --proj-version-bump-logic --skip-tag --aggregate-pre-releases --changelog-all
       - name: Get current version
