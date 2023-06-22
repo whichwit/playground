@@ -44,7 +44,7 @@ jobs:
           echo "version=$(versionize inspect)" >> $GITHUB_OUTPUT
       - name: Create release Pull Request
         uses: peter-evans/create-pull-request@v5
-        if: !startsWith(${{ steps.commit-subject.outputs.subject }}, "chore(release):" )
+        if: startsWith(${{ steps.commit-subject.outputs.subject }}, "chore(release):" ) != true
         id: cpr
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
