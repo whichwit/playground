@@ -43,7 +43,7 @@ jobs:
         run: |
           versionize --proj-version-bump-logic --skip-tag --aggregate-pre-releases --changelog-all
       - name: Bump pre-release version and create changelog
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'push'
         run: |
           versionize --pre-release pre --proj-version-bump-logic --skip-tag --changelog-all
       - name: Get current version
