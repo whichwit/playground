@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
+    message:
+      description: 'Message to lint'
+      required: true
+      type: string
 
 jobs:
   commitlint:
@@ -17,4 +21,11 @@ jobs:
           npm install -g @commitlint/cli @commitlint/config-conventional
           echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
       - name: Validate PR commits with commitlint
-        run: echo "${{ github.event.pull_request.title }}" | commitlint --verbose
+        if: github.event_name == 'pull_request'
+        run: echo ${{ github.event.pull_request.title }} | commitlint --verbose
+      - name: Validate input message with commitlint
+        if: github.event_name == 'workflow_dispatch'
+        run: gh pr view --json title -t "{{.title}}" | commitlint --verbose
+        env:          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
