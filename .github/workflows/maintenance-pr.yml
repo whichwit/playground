@@ -24,6 +24,6 @@ jobs:
           TITLE="${{github.event.pull_request.title}}"          
           gh pr edit ${{ github.event.pull_request.number}} --title "${TITLE/Bump /chore: bump }"          
           gh workflow run lint-commit-message.yml --ref ${{ github.event.pull_request.head.ref }}
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
