@@ -9,7 +9,7 @@ on:
       - edited
 
 jobs:
-  commitlint:
+  maintenance:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,7 +19,7 @@ jobs:
         run: echo "special processing"
       - name: github.event.pull_request.base.ref
         run: |
-          echo ${github.event.pull_request.base.ref}
+          echo ${{github.event.pull_request.base.ref}}
       - name: github.event.pull_request.target.ref
         run: |
-          echo ${github.event.pull_request.target.ref}
+          echo ${{github.event.pull_request.target.ref}}
