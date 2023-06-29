@@ -19,3 +19,5 @@ jobs:
         run: |
           echo "special processing"
           gh pr edit ${{ github.event.pull_request.number}} --title "chore: ${{github.event.pull_request.title}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
