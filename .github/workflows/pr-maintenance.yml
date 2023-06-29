@@ -16,4 +16,6 @@ jobs:
         with:
           fetch-depth: 0
       - if: startsWith(github.event.pull_request.title, 'Bump ') && startsWith(github.event.pull_request.head.ref, 'pr1')
-        run: echo "special processing"
+        run: |
+          echo "special processing"
+          gh pr edit ${{ github.event.pull_request.number}} --title "I edited!" -- "chore: ${{github.event.pull_request.title}}"
