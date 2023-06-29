@@ -8,6 +8,9 @@ on:
       - reopened
       - edited
 
+permissions:
+  pull-requests: write
+
 jobs:
   maintenance:
     runs-on: ubuntu-latest
