@@ -4,10 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
-    message:
-      description: 'Message to lint'
-      required: true
-      type: string
+    # message:
+    #   description: 'Message to lint'
+    #   required: true
+    #   type: string
 
 jobs:
   commitlint:
