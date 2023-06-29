@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - if: startsWith(github.event.pull_request.title, 'Bump ') && startsWith(github.event.pull_request.head.ref, 'pr1')
         run: |
-          echo "special processing"
           gh pr edit ${{ github.event.pull_request.number}} --title "chore: ${{github.event.pull_request.title}}"
+          gh workflow run lint-commit-message.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
