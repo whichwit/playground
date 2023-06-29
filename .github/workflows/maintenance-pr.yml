@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          TITLE="${${{github.event.pull_request.title}}/Bump /chore: bump }"          
+          TITLE=$(echo ${{github.event.pull_request.title}} | sed "s/Bump /chore: bump /")
           gh pr edit ${{ github.event.pull_request.number}} --title "$TITLE"          
           gh workflow run lint-commit-message.yml --ref ${{ github.event.pull_request.head.ref }}
           env:
