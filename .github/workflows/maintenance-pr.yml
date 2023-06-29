@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       
       - run: |
-          gh pr edit ${{ github.event.pull_request.number}} --title $(echo "${{github.event.pull_request.title}}" | sed "s/Bump /chore: bump /")
+          gh pr edit ${{ github.event.pull_request.number}} --title '$(echo "${{github.event.pull_request.title}}" | sed "s/Bump /chore: bump /")'
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
