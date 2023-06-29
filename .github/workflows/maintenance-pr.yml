@@ -22,6 +22,6 @@ jobs:
           fetch-depth: 0
       - run: |
           gh pr edit ${{ github.event.pull_request.number}} --title "chore: ${{github.event.pull_request.title}}"
-          gh workflow run lint-commit-message.yml
+          gh workflow run lint-commit-message.yml --ref my-branch ${{ github.event.pull_request.head.ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
