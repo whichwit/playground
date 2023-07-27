@@ -54,7 +54,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         id: cpr
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           commit-message: |
             chore(release): ${{ steps.get-version.outputs.version }}
           title: |
