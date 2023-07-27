@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.2.0-pre.1"></a>
+## [4.2.0-pre.1](https://www.github.com/whichwit/playground/releases/tag/v4.2.0-pre.1) (2023-7-27)
+
+### Other
+
+* with approval ([58a289d](https://www.github.com/whichwit/playground/commit/58a289dfbdafa13ba2248dfd3f2bfa88a306971c))
+
 <a name="4.2.0-pre.0"></a>
 ## [4.2.0-pre.0](https://www.github.com/whichwit/playground/releases/tag/v4.2.0-pre.0) (2023-7-27)
 
