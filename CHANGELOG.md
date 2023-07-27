@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.2.0-pre.0"></a>
+## [4.2.0-pre.0](https://www.github.com/whichwit/playground/releases/tag/v4.2.0-pre.0) (2023-7-27)
+
+### Features
+
+* remove sample application ([fa35a27](https://www.github.com/whichwit/playground/commit/fa35a27cc3c08add0f8e9487026c5726ff5abfba))
+* Thu Jun 22 10:40:33 EDT 2023 ([3cf0bb1](https://www.github.com/whichwit/playground/commit/3cf0bb18ad08c345c590722d40a5f044a548cb7b))
+
+### Bug Fixes
+
+* Thu Jun 22 10:39:11 EDT 2023 ([7d78a04](https://www.github.com/whichwit/playground/commit/7d78a0461150e149a731899a69179d441ff79a56))
+* update a file ([5d08c61](https://www.github.com/whichwit/playground/commit/5d08c6155f34ed97613ece851b5f398a5c9e4ef6))
+
+### Other
+
+* Bump version ([49a4607](https://www.github.com/whichwit/playground/commit/49a4607872ea5d22b7def8f510ab8c6359394870))
+* push action ([ab61cc9](https://www.github.com/whichwit/playground/commit/ab61cc9cbb81631bc35105706fff7ca197c7f21c))
+* Revert "Bump version" ([dd99359](https://www.github.com/whichwit/playground/commit/dd993592b824dd208d8ccc8094ee9fb5d10e8b1a))
+* default codeowners ([3deb355](https://www.github.com/whichwit/playground/commit/3deb3552ec1d20ebc897a0e4d487552c0946aae9))
+* test -a ([526ab1f](https://www.github.com/whichwit/playground/commit/526ab1f471a6399ebdeb7e2553e3a891944e3112))
+
 <a name="4.1.0"></a>
 ## [4.1.0](https://www.github.com/whichwit/playground/releases/tag/v4.1.0) (2023-6-22)
 
