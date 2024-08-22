@@ -14,12 +14,18 @@ jobs:
       id-token: write
       contents: read
     steps:
+      # - name: Azure login
+      #   uses: azure/login@v2
+      #   with:
+      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
+      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: Azure login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: 1af2bc20-3a8e-41f9-9fa7-d3bbc4e8eb5e
+          tenant-id: 9ce70869-60db-44fd-abe8-d2767077fc8f
+          subscription-id: 78f4d198-9cd7-44f1-9e55-61a5e012d4e8
       - name: Azure CLI script
         uses: azure/cli@v2
         with:
