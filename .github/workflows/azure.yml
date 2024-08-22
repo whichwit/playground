@@ -6,13 +6,13 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
   deploy-to-azure:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
     steps:
       # - name: Azure login
       #   uses: azure/login@v2
