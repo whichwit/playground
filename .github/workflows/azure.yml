@@ -21,7 +21,7 @@ jobs:
       #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
       #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: Azure login
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
           environment: AzureUSGovernment
           client-id: 1af2bc20-3a8e-41f9-9fa7-d3bbc4e8eb5e
