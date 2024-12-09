@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.2.0-pre.2"></a>
+## [4.2.0-pre.2](https://www.github.com/whichwit/playground/releases/tag/v4.2.0-pre.2) (2024-08-22)
+
+### Other
+
+* azure ([61bf6d0](https://www.github.com/whichwit/playground/commit/61bf6d07dd1cdca286b1747857ea30d64aefa530))
+* azure ([16cb15b](https://www.github.com/whichwit/playground/commit/16cb15bbe7dd5009f37a25eed0c150ea6c017556))
+
 <a name="4.2.0-pre.1"></a>
 ## [4.2.0-pre.1](https://www.github.com/whichwit/playground/releases/tag/v4.2.0-pre.1) (2023-7-27)
 
